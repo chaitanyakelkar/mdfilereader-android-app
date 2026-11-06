@@ -59,6 +59,8 @@ R8 shrinking reduces the APK to 1.9 MB. A release build, signed with the debug k
 test only, was smoke tested: sample rendering, an SVG badge over the network, and the real
 picker all worked, with no crashes.
 
+The final release APK, signed with the release key, was also installed and opened on a Nokia C32. It was checked to start with no crashes.
+
 ## Build alignment
 
 The build now matches the project's sibling WhatsApp app: AGP 9.4.1, Kotlin 2.2.10, Compose BOM
