@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/assets/app-icon.png" width="128" alt="MD Reader app icon">
+</p>
+
 # MD Reader
 
 An Android app for reading Markdown files properly: tables that stay tables, code that
