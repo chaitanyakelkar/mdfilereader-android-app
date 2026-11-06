@@ -41,7 +41,7 @@ without granting storage permissions.
 | NFR-3 | **Robustness:** a malformed or adversarial file (deep nesting, huge size) must not crash the app |
 | NFR-4 | **Performance:** parsing runs off the main thread; long documents render lazily |
 | NFR-5 | **Accessibility:** WCAG AA contrast (4.5:1) in every theme; 48dp touch targets; headings exposed to TalkBack; text scales with system font size |
-| NFR-6 | **Compatibility:** Android 8.0 (API 26) and up; phones and tablets; portrait and landscape |
+| NFR-6 | **Compatibility:** Android 7.0 (API 24) and up; phones and tablets; portrait and landscape |
 
 ## Out of scope for v1
 
