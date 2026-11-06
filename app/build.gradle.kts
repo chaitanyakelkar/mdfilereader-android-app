@@ -1,7 +1,21 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.compose.compiler)
 }
+
+// Release signing values come from keystore.properties, which git ignores, or from environment
+// variables. Without them, assembleRelease still works and produces an unsigned APK.
+val keystoreProperties = Properties().apply {
+    val file = rootProject.file("keystore.properties")
+    if (file.exists()) file.inputStream().use(::load)
+}
+
+fun signingValue(property: String, environmentVariable: String): String? =
+    keystoreProperties.getProperty(property) ?: System.getenv(environmentVariable)
+
+val releaseStoreFile = signingValue("storeFile", "MDREADER_STORE_FILE")
 
 android {
     namespace = "io.github.chaitanyakelkar.mdreader"
@@ -10,7 +24,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "io.github.chaitanyakelkar.mdreader"
+        applicationId = "com.cakelkar.mdfilereader"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
@@ -18,8 +32,20 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        if (releaseStoreFile != null) {
+            create("release") {
+                storeFile = rootProject.file(releaseStoreFile)
+                storePassword = signingValue("storePassword", "MDREADER_STORE_PASSWORD")
+                keyAlias = signingValue("keyAlias", "MDREADER_KEY_ALIAS")
+                keyPassword = signingValue("keyPassword", "MDREADER_KEY_PASSWORD")
+            }
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig = signingConfigs.findByName("release")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(

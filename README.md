@@ -63,7 +63,15 @@ Each image shows the light theme on the left and the dark theme on the right. Fu
 
 ## Installation
 
-There is no prebuilt release yet, so build the app from source.
+**[Download the latest APK](https://github.com/chaitanyakelkar/mdfilereader-android-app/releases/latest/download/MDReader.apk)** for Android 7.0 or newer. Older versions are on the [releases page](https://github.com/chaitanyakelkar/mdfilereader-android-app/releases).
+
+1. Download the APK on your phone and open it.
+2. If asked, allow your browser or file manager to install unknown apps. Google Play Protect may show a warning because the app isn't from the Play Store.
+3. Open **MD Reader**.
+
+To update, download the newest APK and install it over the old one. The app doesn't update itself.
+
+### Build from source
 
 **Requirements**
 
@@ -94,7 +102,7 @@ To run the instrumented tests, with a device or emulator connected:
 ./gradlew connectedDebugAndroidTest
 ```
 
-`assembleRelease` produces an unsigned APK, which Android won't install until you sign it.
+Without a signing key, `assembleRelease` produces an unsigned APK, which Android won't install. To set up a key and publish a release, see the [release guide](docs/05-releasing.md).
 
 ## Privacy
 
@@ -138,6 +146,7 @@ app/src/androidTest/  Instrumented tests
 2. [UI design](docs/02-ui-design.md) and [mockups](docs/design/ui-mockups.html)
 3. [Architecture](docs/03-architecture.md)
 4. [Test report](docs/04-test-report.md)
+5. [Release guide](docs/05-releasing.md)
 
 ## Built with
 
