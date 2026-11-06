@@ -9,7 +9,7 @@ Test date: 2026-11-06. Device: Pixel 4 emulator, Android 13 (API 33).
 | Unit (JVM) | Parser, decoder, search, highlighter, link policy, recents, contrast, ViewModel | 76 of 76 passed |
 | Instrumented (emulator) | Screens and flows, intent matching, content provider loading | 18 of 18 passed |
 | Manual end to end | Real system picker, restart, rotation, gestures, release build | Passed, after the fixes below |
-| Android Lint | Whole project | 0 errors, 4 accepted warnings |
+| Android Lint | Whole project | 0 errors, 9 accepted warnings |
 
 Run the automated tests with:
 
@@ -59,10 +59,17 @@ R8 shrinking reduces the APK to 1.9 MB. A release build, signed with the debug k
 test only, was smoke tested: sample rendering, an SVG badge over the network, and the real
 picker all worked, with no crashes.
 
+## Build alignment
+
+The build now matches the project's sibling WhatsApp app: AGP 9.4.1, Kotlin 2.2.10, Compose BOM
+2026.02.01, Java 11 and `minSdk` 24. Coil is held at 3.4.0, because later versions need Kotlin
+2.3 or newer at compile time. All unit and instrumented tests were rerun after this change, on
+API 33. The unsigned release APK can't be installed by design (`INSTALL_PARSE_FAILED_NO_CERTIFICATES`).
+
 ## Not covered
 
 - Physical devices, and Android versions other than 13. The minimum supported version is
-  Android 8.0
+  Android 7.0
 - Tablets, except for the landscape layout on a phone
 - TalkBack
 - Performance on long documents. The emulator ran with software rendering and under memory
@@ -72,6 +79,5 @@ picker all worked, with no crashes.
 ## Accepted lint warnings
 
 - `enableOnBackInvokedCallback` and `dataExtractionRules` are ignored on older Android, as intended
-- `mipmap-anydpi-v26`: lint suggests renaming it, but the renamed folder failed resource linking
-- A newer Gradle (9.8.2) is available: the wrapper uses 9.6.0, which was already installed
-  here, because the 9.8.2 download timed out
+- Newer versions of AGP, Kotlin, the Compose BOM and Coil exist: versions match the sibling project on purpose
+- A newer Gradle (9.8.2) is available: the wrapper uses 9.6.0, the same as the sibling project
