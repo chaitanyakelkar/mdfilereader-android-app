@@ -68,7 +68,7 @@ API 33. The unsigned release APK can't be installed by design (`INSTALL_PARSE_FA
 
 ## Not covered
 
-- Physical devices, and Android versions other than 13. The minimum supported version is
+- Physical devices beyond a Nokia C32 on Android 13, where the app installed and the main screens ran without crashes, and Android versions other than 13. The minimum supported version is
   Android 7.0
 - Tablets, except for the landscape layout on a phone
 - TalkBack
