@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <!-- Debug builds only: serves fixed documents for instrumented and manual tests. -->
+        <provider
+            android:name=".TestDocsProvider"
+            android:authorities="${applicationId}.testdocs"
+            android:exported="false" />
+    </application>
+</manifest>

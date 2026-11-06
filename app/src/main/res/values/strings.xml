@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MD Reader</string>
+
+    <!-- Home -->
+    <string name="open_file">Open file</string>
+    <string name="try_sample">Try the sample</string>
+    <string name="no_recent_files">No recent files</string>
+    <string name="empty_hint">Open a Markdown file to start reading.</string>
+    <string name="remove_recent">Remove %1$s from recent files</string>
+
+    <!-- Reader -->
+    <string name="back">Back</string>
+    <string name="find">Find</string>
+    <string name="contents">Contents</string>
+    <string name="more_options">More options</string>
+    <string name="view_source">View source</string>
+    <string name="view_formatted">View formatted</string>
+    <string name="share">Share</string>
+    <string name="no_headings">This document has no headings.</string>
+    <string name="empty_document">This document is empty.</string>
+    <string name="find_in_document">Find in document</string>
+    <string name="close_find">Close find</string>
+    <string name="previous_match">Previous match</string>
+    <string name="next_match">Next match</string>
+
+    <!-- Markdown content -->
+    <string name="copy_code">Copy code</string>
+    <string name="code_copied">Code copied</string>
+    <string name="task_done">Completed task</string>
+    <string name="task_todo">Open task</string>
+    <string name="properties">Properties</string>
+    <string name="image_local_unavailable">Images stored next to the file can\'t be shown</string>
+    <string name="image_remote_off">Remote images are turned off</string>
+    <string name="image_failed">Image couldn\'t be loaded</string>
+    <string name="link_anchor_missing">That section wasn\'t found in this document</string>
+    <string name="link_no_app">No app can open this link</string>
+    <string name="link_relative">Links to other files aren\'t supported yet</string>
+    <string name="link_blocked">This link type is blocked for safety</string>
+
+    <!-- Appearance -->
+    <string name="appearance">Appearance</string>
+    <string name="theme">Theme</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_sepia">Sepia</string>
+    <string name="font">Font</string>
+    <string name="font_sans">Sans</string>
+    <string name="font_serif">Serif</string>
+    <string name="text_size">Text size</string>
+    <string name="text_smaller">Smaller text</string>
+    <string name="text_larger">Larger text</string>
+    <string name="load_remote_images">Load remote images</string>
+
+    <!-- Errors -->
+    <string name="choose_another_file">Choose another file</string>
+    <string name="error_not_found_title">File not found</string>
+    <string name="error_not_found_detail">It may have been moved or deleted.</string>
+    <string name="error_no_access_title">Access to this file has expired</string>
+    <string name="error_no_access_detail">Android only lets this app read a file for as long as the app that shared it allows. Open the file again to continue.</string>
+    <string name="error_too_large_title">This file is too large</string>
+    <string name="error_too_large_detail">Files up to 10 MB can be opened.</string>
+    <string name="error_binary_title">This isn\'t a text file</string>
+    <string name="error_binary_detail">It looks like a binary file, so it can\'t be shown as Markdown.</string>
+    <string name="error_unknown_title">Couldn\'t open this file</string>
+    <string name="error_unknown_detail">Something went wrong while reading it.</string>
+</resources>

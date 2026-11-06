@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- An "M" and a down arrow, the common mark for Markdown. Centered in the adaptive safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.3"
+        android:scaleY="0.3"
+        android:translateX="22.8"
+        android:translateY="34.8">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M30,98V30h20l20,25 20,-25h20v68H90V59L70,84 50,59v39zM155,98l-30,-33h20V30h20v35h20z" />
+    </group>
+</vector>
